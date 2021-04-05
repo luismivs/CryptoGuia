@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'crypto-guia';
+  title = 'Crypto Guía';
+
+  premiumAccess: Boolean = false;
+
+  constructor(){}
+
+  ngOnInit(
+  ){}
+
+
+  premium(){
+    this.premiumAccess = true;
+  }
 }
