@@ -4,17 +4,19 @@
     </div>
     <div class="col-sm">
       <div fxLayout="column" fxLayoutAlign="space-between">
-        <form>
+        <form [formGroup]="loginForm">
           <h5>Login</h5>
           <div class="form-group">
             <label for="exampleInputEmail1">Usuario</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nombre de usuario">
+            <input [class.is-invalid]="loginForm.get('nombre').touched && loginForm.get('nombre').invalid"
+             type="text" class="form-control" placeholder="Nombre de usuario" formControlName="nombre">
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1">Contraseña</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña">
+            <input [class.is-invalid]="loginForm.get('pass').touched && loginForm.get('pass').invalid"
+             type="password" class="form-control" placeholder="Contraseña" formControlName="pass">
           </div>
-          <button fxFill type="submit" class="btn btn-primary">Entrar</button>
+          <button fxFill type="submit" (click)="comprobarLogin()" class="btn btn-primary" [disabled]="!loginForm.valid">Entrar</button>
         </form>
       </div>
     </div>

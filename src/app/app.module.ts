@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { ValorActualComponent } from './valor-actual/valor-actual.component';
 import { NavComponent } from './nav/nav.component';
+import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,9 @@ import { NavComponent } from './nav/nav.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
