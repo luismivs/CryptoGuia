@@ -7,13 +7,17 @@ import { InfoGeneralComponent } from './info-general/info-general.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
+import { ValorActualComponent } from './valor-actual/valor-actual.component';
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InfoGeneralComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    ValorActualComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
